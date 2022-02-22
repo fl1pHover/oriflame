@@ -1,0 +1,55 @@
+@mixin btn($btn__bg) {
+    background: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 3px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 10px 30px;
+    background-color: $btn__bg;
+    color: #333333;
+    z-index: 2;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        background-color: $dark;
+        transition: 0.4s ease;
+        z-index: -1;
+    }
+    &:hover::before {
+        content: '';
+        width: 100%;
+    }
+    &:hover {
+        color: $white;
+    }
+}
+
+.banner {
+    @include flexCenter(row);
+    margin: 50px 0;
+    .container {
+        background: url(/img/banner/banner-1.jpg) no-repeat center center;
+        background-size: cover;
+        padding: 100px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 60px;
+        h1 {
+            text-transform: uppercase;
+        }
+    }
+}
+
+@mixin hover($hoverColor) {
+    transition: 0.2s ease;
+    &:hover {
+        color: $hoverColor;
+    }
+}

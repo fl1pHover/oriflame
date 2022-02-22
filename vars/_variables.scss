@@ -1,0 +1,94 @@
+@import 'fonts';
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #ffa6a8;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+$white: #fff;
+$gray: #989898;
+$gray-dark: #343a40;
+$primary: #007bff;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #212529;
+@mixin transition($timing) {
+    transition-duration: 0.4s;
+    transition-timing-function: $timing;
+}
+
+@mixin margin($top, $bottom) {
+    margin: $top;
+    bottom: $bottom;
+}
+
+@mixin line($background, $width) {
+    &::before {
+        content: '';
+        position: absolute;
+        height: 13px;
+        width: $width;
+        display: block;
+        left: 0;
+        bottom: -20px;
+        background: $background;
+        mask: url(/img/line.svg) repeat left center;
+    }
+}
+
+.container {
+    max-width: 1140px;
+}
+
+.big__header {
+    font-family: 'El Messiri', sans-serif;
+    font-weight: 500;
+    position: relative;
+    line-height: 1;
+    font-size: 50px;
+    color: $dark;
+}
+
+.main__header {
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    font-family: 'El Messiri', sans-serif;
+    color: $dark;
+}
+
+.sub__header {
+    color: #999999;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1;
+    color: $dark;
+}
+
+.medium__header {
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    color: $dark;
+}
+
+.small__header {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: $dark;
+}
+
+.main__p {
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+}

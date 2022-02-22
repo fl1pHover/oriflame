@@ -1,0 +1,1 @@
+gsap.to(".nav__logo", { duration: 1, x: 100 });
